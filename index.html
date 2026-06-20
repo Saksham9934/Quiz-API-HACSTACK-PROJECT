@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<div class="dark-toggle" id="darkModeBtn">
+    🌙
+</div>
+
+<!-- ================= MAIN PAGE ================= -->
+
+<div class="page">
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <!-- Left Side -->
+        <div class="hero-left">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                 alt="Quiz Illustration"
+                 class="hero-image">
+
+            <h1>Quiz App</h1>
+
+            <p>
+                Test your knowledge with interactive quizzes.
+                Choose your category and difficulty level,
+                then challenge yourself!
+            </p>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="hero-right">
+
+            <!-- Start Screen -->
+            <div id="start-screen" class="card">
+
+                <h2>Start Quiz</h2>
+
+                <label>Category</label>
+
+                <select id="category">
+                    <option value="9">General Knowledge</option>
+                    <option value="18">Computer Science</option>
+                    <option value="21">Sports</option>
+                </select>
+
+                <label>Difficulty</label>
+
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+                <button onclick="startQuiz()">
+                    Start Quiz
+                </button>
+
+            </div>
+
+            <!-- Quiz Screen -->
+
+            <div id="quiz-screen" class="card hidden">
+
+                <div class="top-bar">
+
+                    <span id="progress">Question 1 / 10</span>
+
+                    <span id="score">Score : 0</span>
+
+                    <span id="timer">15</span>
+
+                </div>
+
+                <h2 id="question">
+                    Loading...
+                </h2>
+
+                <div id="options"></div>
+
+                <button onclick="nextQuestion()">
+                    Next Question
+                </button>
+
+            </div>
+
+            <!-- Result Screen -->
+
+<div id="result-screen" class="card hidden">
+
+
+    <!-- Celebration Section -->
+    <div class="celebration-circle">
+        <div class="trophy">🏆</div>
+    </div>
+
+    <div id="performanceBadge" class="performance-badge excellent">
+        🌟 Excellent
+    </div>
+
+    <div class="ribbon">
+        Achievement Unlocked
+    </div>
+
+    <h2>Quiz Completed 🎉</h2>
+
+    <div id="final-score">0 / 30</div>
+
+    <p id="summary">
+        Great Job! You performed very well.
+    </p>
+
+    <div class="result-grid">
+
+        <div class="stat-card total">
+            <div class="stat-icon">📚</div>
+            <div class="stat-value" id="totalQuestions">10</div>
+            <div class="stat-label">Total Questions</div>
+        </div>
+
+        <div class="stat-card correct">
+            <div class="stat-icon">✅</div>
+            <div class="stat-value" id="correctAnswers">8</div>
+            <div class="stat-label">Correct</div>
+        </div>
+
+        <div class="stat-card incorrect">
+            <div class="stat-icon">❌</div>
+            <div class="stat-value" id="wrongAnswers">2</div>
+            <div class="stat-label">Incorrect</div>
+        </div>
+
+        <div class="stat-card percentage">
+            <div class="stat-icon">📊</div>
+            <div class="stat-value" id="percentage"></div>
+            <div class="stat-label">Percentage</div>
+        </div>
+
+    </div>
+
+    <button onclick="location.reload()">
+        🔄 Restart Quiz
+    </button>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+</div>
+<!-- Dark Mode Toggle -->
+<div class="theme-switch">
+    <span id="themeText">🌞 Light</span>
+
+    <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+    </label>
+</div>
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <h3>Connect With Me</h3>
+
+    <div class="social-icons">
+
+        <a href="https://github.com/Saksham9934" target="_blank" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/saksham-jha-141623275/" target="_blank" title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a href="https://portfolio-website-liard-nu-38.vercel.app/" target="_blank" title="Portfolio">
+            <i class="fa-solid fa-globe"></i>
+        </a>
+
+        <a href="mailto:sakshamjha3027@gmail.com" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+
+    </div>
+    <p>© 2026 Quiz App | Designed by <strong>Saksham Jha</strong></p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

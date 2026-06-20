@@ -1,0 +1,1846 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+:root{
+
+--primary:#6C63FF;
+--secondary:#7B2FF7;
+--pink:#FF5E9C;
+--blue:#00C6FF;
+--green:#2ECC71;
+--orange:#FFB347;
+--white:#ffffff;
+--dark:#222831;
+--glass:rgba(255,255,255,.15);
+--glass-border:rgba(255,255,255,.25);
+
+--shadow:
+0 15px 35px rgba(0,0,0,.25);
+
+--radius:22px;
+
+}
+
+/*================ RESET =================*/
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+color:white;
+
+overflow-x:hidden;
+
+background:linear-gradient(-45deg,
+#667eea,
+#764ba2,
+#4facfe,
+#00f2fe);
+
+background-size:400% 400%;
+
+animation:gradientBG 12s ease infinite;
+
+}
+
+/*================ BACKGROUND ANIMATION =================*/
+
+@keyframes gradientBG{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+/*================ PAGE =================*/
+
+.page{
+
+width:100%;
+min-height:100vh;
+
+}
+
+/*================ HERO =================*/
+
+.hero{
+
+max-width:1400px;
+
+margin:auto;
+
+padding:80px 40px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:60px;
+
+min-height:100vh;
+
+}
+
+/*================ LEFT SIDE =================*/
+
+.hero-left{
+
+flex:1;
+
+animation:slideLeft 1s ease;
+
+}
+
+.hero-left h1{
+
+font-size:70px;
+
+font-weight:800;
+
+margin-top:25px;
+
+line-height:1.1;
+
+}
+
+.hero-left h1 span{
+
+color:#FFD166;
+
+}
+
+.hero-left p{
+
+font-size:20px;
+
+margin-top:25px;
+
+line-height:1.8;
+
+max-width:600px;
+
+color:#ff0707;
+
+}
+
+/*================ ILLUSTRATION =================*/
+
+.hero-image{
+
+width:380px;
+
+display:block;
+
+margin:auto;
+
+animation:float 4s ease-in-out infinite;
+
+filter:drop-shadow(0 15px 25px rgba(0,0,0,.35));
+
+}
+
+/* Floating */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/*================ RIGHT SIDE =================*/
+
+.hero-right{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+/*================ GLASS CARD =================*/
+
+.card{
+
+width:100%;
+
+max-width:600px;
+
+padding:40px;
+
+border-radius:var(--radius);
+
+background:var(--glass);
+
+backdrop-filter:blur(16px);
+
+-webkit-backdrop-filter:blur(16px);
+
+border:1px solid var(--glass-border);
+
+box-shadow:var(--shadow);
+
+animation:fadeIn 1s ease;
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+0 25px 45px rgba(0,0,0,.35);
+
+}
+
+/*================ HEADINGS =================*/
+
+.card h2{
+
+font-size:38px;
+
+margin-bottom:25px;
+
+text-align:center;
+
+font-weight:700;
+
+}
+
+/*================ LABEL =================*/
+
+label{
+
+display:block;
+
+margin-top:20px;
+
+margin-bottom:8px;
+
+font-size:18px;
+
+font-weight:500;
+
+}
+
+/*================ SELECT =================*/
+
+select{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+outline:none;
+
+border-radius:15px;
+
+font-size:16px;
+
+color:white;
+
+background:rgba(255,255,255,.18);
+
+transition:.35s;
+
+cursor:pointer;
+
+}
+
+select:hover{
+
+background:rgba(255,255,255,.28);
+
+}
+
+select option{
+
+color:#222;
+
+}
+
+/*================ BUTTON =================*/
+
+button{
+
+width:100%;
+
+padding:17px;
+
+margin-top:30px;
+
+border:none;
+
+border-radius:15px;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
+
+background:linear-gradient(
+135deg,
+#FF5E9C,
+#FF758C);
+
+color:white;
+
+transition:.35s;
+
+box-shadow:
+0 12px 20px rgba(255,94,156,.35);
+
+}
+
+button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+0 18px 35px rgba(255,94,156,.45);
+
+}
+
+button:active{
+
+transform:scale(.97);
+
+}
+
+/*================ HIDDEN =================*/
+
+.hidden{
+
+display:none;
+
+}
+
+/*================ ANIMATIONS =================*/
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes slideLeft{
+
+from{
+
+opacity:0;
+
+transform:translateX(-70px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+/*================ DECORATION BLOBS =================*/
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:280px;
+
+height:280px;
+
+background:#FF5E9C;
+
+border-radius:50%;
+
+filter:blur(140px);
+
+top:-60px;
+
+left:-60px;
+
+z-index:-1;
+
+opacity:.5;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+width:320px;
+
+height:320px;
+
+background:#00C6FF;
+
+border-radius:50%;
+
+filter:blur(150px);
+
+bottom:-100px;
+
+right:-80px;
+
+z-index:-1;
+
+opacity:.45;
+
+}
+
+/*================ RESPONSIVE =================*/
+
+@media(max-width:1100px){
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+padding:60px 25px;
+
+}
+
+.hero-left p{
+
+margin:auto;
+
+}
+
+.hero-image{
+
+width:280px;
+
+}
+
+.hero-left h1{
+
+font-size:55px;
+
+}
+
+.card{
+
+max-width:650px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+padding:40px 15px;
+
+}
+
+.hero-left h1{
+
+font-size:42px;
+
+}
+
+.hero-left p{
+
+font-size:17px;
+
+}
+
+.hero-image{
+
+width:220px;
+
+}
+
+.card{
+
+padding:25px;
+
+}
+
+.card h2{
+
+font-size:30px;
+
+}
+
+button{
+
+font-size:16px;
+
+}
+
+}
+/*=========================================================
+            QUIZ APP - PROFESSIONAL CSS
+                    PART 2
+Quiz UI • Progress Bar • Timer • Options
+=========================================================*/
+
+/*================ QUIZ SCREEN =================*/
+
+#quiz-screen{
+
+animation:fadeIn .5s ease;
+
+}
+
+/*================ TOP BAR =================*/
+
+.top-bar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:25px;
+
+flex-wrap:wrap;
+
+}
+
+/*================ INFO BADGES =================*/
+
+.top-bar span{
+
+background:rgba(255,255,255,.15);
+
+padding:12px 18px;
+
+border-radius:30px;
+
+font-size:15px;
+
+font-weight:600;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+/*================ SCORE =================*/
+
+#score{
+
+background:linear-gradient(135deg,#00c853,#64dd17);
+
+color:#fff;
+
+}
+
+/*================ PROGRESS =================*/
+
+#progress{
+
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+
+color:white;
+
+}
+
+/*================ TIMER =================*/
+
+#timer{
+
+width:65px;
+
+height:65px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#ff512f,#dd2476);
+
+font-size:22px;
+
+font-weight:700;
+
+color:white;
+
+box-shadow:
+
+0 10px 20px rgba(255,82,82,.35);
+
+animation:pulse 1s infinite;
+
+}
+
+/* Timer Pulse */
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/*================ PROGRESS BAR =================*/
+
+.progress{
+
+width:100%;
+
+height:12px;
+
+background:rgba(255,255,255,.2);
+
+border-radius:50px;
+
+overflow:hidden;
+
+margin:20px 0 30px;
+
+}
+
+.progress-fill{
+
+height:100%;
+
+width:0%;
+
+border-radius:50px;
+
+background:linear-gradient(
+
+90deg,
+
+#00f260,
+
+#0575e6
+
+);
+
+transition:width .5s ease;
+
+}
+
+/*================ QUESTION =================*/
+
+#question{
+
+font-size:26px;
+
+font-weight:600;
+
+line-height:1.6;
+
+margin-bottom:30px;
+
+text-align:center;
+
+animation:fadeQuestion .4s ease;
+
+}
+
+@keyframes fadeQuestion{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*================ OPTIONS =================*/
+
+#options{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:18px;
+
+}
+
+/*================ OPTION CARD =================*/
+
+.option{
+
+padding:18px 22px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.15);
+
+border:2px solid transparent;
+
+cursor:pointer;
+
+font-size:17px;
+
+font-weight:500;
+
+transition:.35s;
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* Left Circle */
+
+.option::before{
+
+content:"";
+
+width:18px;
+
+height:18px;
+
+border-radius:50%;
+
+border:3px solid white;
+
+display:block;
+
+flex-shrink:0;
+
+}
+
+/* Hover */
+
+.option:hover{
+
+transform:translateX(8px);
+
+background:rgba(255,255,255,.22);
+
+border-color:#fff;
+
+}
+
+/* Selected */
+
+.option.selected{
+
+background:linear-gradient(
+
+135deg,
+
+#00c6ff,
+
+#0072ff
+
+);
+
+border-color:white;
+
+color:white;
+
+box-shadow:
+
+0 12px 25px rgba(0,114,255,.35);
+
+}
+
+/* Selected Circle */
+
+.option.selected::before{
+
+background:white;
+
+}
+
+/*================ CORRECT =================*/
+
+.option.correct{
+
+background:linear-gradient(
+
+135deg,
+
+#11998e,
+
+#38ef7d
+
+);
+
+border-color:#fff;
+
+color:white;
+
+}
+
+/*================ WRONG =================*/
+
+.option.wrong{
+
+background:linear-gradient(
+
+135deg,
+
+#ff416c,
+
+#ff4b2b
+
+);
+
+border-color:#fff;
+
+color:white;
+
+}
+
+/*================ DISABLED =================*/
+
+.option.disabled{
+
+pointer-events:none;
+
+opacity:.8;
+
+}
+
+/*================ NEXT BUTTON =================*/
+
+#quiz-screen button{
+
+margin-top:30px;
+
+}
+
+/*================ LOADING =================*/
+
+.loading{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+}
+
+/* Spinner */
+
+.spinner{
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+border:6px solid rgba(255,255,255,.2);
+
+border-top:6px solid white;
+
+animation:spin .8s linear infinite;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/*================ SHAKE =================*/
+
+.shake{
+
+animation:shake .4s;
+
+}
+
+@keyframes shake{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+20%{
+
+transform:translateX(-8px);
+
+}
+
+40%{
+
+transform:translateX(8px);
+
+}
+
+60%{
+
+transform:translateX(-8px);
+
+}
+
+80%{
+
+transform:translateX(8px);
+
+}
+
+100%{
+
+transform:translateX(0);
+
+}
+
+}
+
+/*================ SUCCESS POP =================*/
+
+.pop{
+
+animation:pop .4s ease;
+
+}
+
+@keyframes pop{
+
+0%{
+
+transform:scale(.8);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+/*================ MOBILE =================*/
+
+@media(max-width:768px){
+
+.top-bar{
+
+justify-content:center;
+
+}
+
+#question{
+
+font-size:22px;
+
+}
+
+.option{
+
+font-size:15px;
+
+padding:16px;
+
+}
+
+#timer{
+
+width:58px;
+
+height:58px;
+
+font-size:18px;
+
+}
+
+}
+
+#result-screen{
+    animation:fadeIn .8s ease;
+    text-align:center;
+}
+
+#result-screen h2{
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:25px;
+    color:#ffffff;
+}
+
+/*================ FINAL SCORE =================*/
+
+#final-score{
+
+    font-size:60px;
+
+    font-weight:800;
+
+    margin:20px 0;
+
+    background:linear-gradient(135deg,#FFD700,#FF8C00);
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+
+    animation:scorePop .8s ease;
+}
+
+@keyframes scorePop{
+
+0%{
+transform:scale(.5);
+opacity:0;
+}
+
+70%{
+transform:scale(1.1);
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+/*================ SUMMARY =================*/
+
+#summary{
+
+    margin-top:15px;
+
+    font-size:20px;
+
+    color:#f1f1f1;
+
+    line-height:1.8;
+
+}
+
+/*================ RESULT GRID =================*/
+
+.result-grid{
+
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+/*================ STAT CARD =================*/
+
+.stat-card{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.20);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 30px rgba(0,0,0,.30);
+
+}
+
+/*================ STAT ICON =================*/
+
+.stat-icon{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+/*================ STAT VALUE =================*/
+
+.stat-value{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#FFD166;
+
+}
+
+/*================ STAT LABEL =================*/
+
+.stat-label{
+
+    margin-top:8px;
+
+    font-size:16px;
+
+    color:#f5f5f5;
+
+}
+
+/*================ COLORS =================*/
+
+.correct{
+
+    border-left:6px solid #2ECC71;
+
+}
+
+.incorrect{
+
+    border-left:6px solid #FF4B5C;
+
+}
+
+.percentage{
+
+    border-left:6px solid #00C6FF;
+
+}
+
+.total{
+
+    border-left:6px solid #FFD166;
+
+}
+
+/*================ RESTART BUTTON =================*/
+
+#result-screen button{
+
+    margin-top:35px;
+
+}
+
+/*================ MOBILE =================*/
+
+@media(max-width:768px){
+
+.result-grid{
+
+grid-template-columns:1fr;
+
+}
+
+#final-score{
+
+font-size:46px;
+
+}
+
+#summary{
+
+font-size:18px;
+
+}
+
+.stat-value{
+
+font-size:28px;
+
+}
+
+}
+/*=========================================================
+            QUIZ APP - PROFESSIONAL CSS
+                    PART 3B
+Performance Badge • Confetti • Celebration
+=========================================================*/
+
+/*================ PERFORMANCE BADGE =================*/
+
+.performance-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
+padding:15px 35px;
+
+margin:30px auto;
+
+border-radius:50px;
+
+font-size:22px;
+
+font-weight:700;
+
+color:#fff;
+
+background:linear-gradient(135deg,#6C63FF,#7B2FF7);
+
+box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+animation:badgeBounce 1s ease;
+
+}
+
+/* Badge Colors */
+
+.performance-badge.excellent{
+
+background:linear-gradient(135deg,#00c853,#64dd17);
+
+}
+
+.performance-badge.good{
+
+background:linear-gradient(135deg,#ff9800,#ffc107);
+
+}
+
+.performance-badge.average{
+
+background:linear-gradient(135deg,#ff5252,#ff1744);
+
+}
+
+.performance-badge i{
+
+font-size:30px;
+
+}
+
+/*================ BADGE ANIMATION =================*/
+
+@keyframes badgeBounce{
+
+0%{
+
+opacity:0;
+
+transform:scale(.3);
+
+}
+
+60%{
+
+transform:scale(1.15);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+/*================ TROPHY =================*/
+
+.trophy{
+
+font-size:90px;
+
+text-align:center;
+
+margin:20px auto;
+
+animation:trophyFloat 3s ease-in-out infinite;
+
+filter:drop-shadow(0 12px 20px rgba(0,0,0,.35));
+
+}
+
+@keyframes trophyFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/*================ ACHIEVEMENT RIBBON =================*/
+
+.ribbon{
+
+display:inline-block;
+
+padding:12px 30px;
+
+margin-top:20px;
+
+background:linear-gradient(135deg,#FFD700,#FF9800);
+
+color:#222;
+
+font-weight:700;
+
+font-size:18px;
+
+border-radius:50px;
+
+box-shadow:0 10px 20px rgba(255,193,7,.35);
+
+animation:ribbonGlow 2s infinite alternate;
+
+}
+
+@keyframes ribbonGlow{
+
+0%{
+
+box-shadow:0 0 15px rgba(255,193,7,.4);
+
+}
+
+100%{
+
+box-shadow:0 0 35px rgba(255,193,7,.8);
+
+}
+
+}
+
+/*================ CONFETTI =================*/
+
+.confetti{
+
+position:fixed;
+
+width:12px;
+
+height:12px;
+
+border-radius:3px;
+
+pointer-events:none;
+
+animation:confettiFall 4s linear forwards;
+
+z-index:9999;
+
+}
+
+.confetti:nth-child(5n){
+
+background:#FFD700;
+
+}
+
+.confetti:nth-child(5n+1){
+
+background:#00C6FF;
+
+}
+
+.confetti:nth-child(5n+2){
+
+background:#FF5E9C;
+
+}
+
+.confetti:nth-child(5n+3){
+
+background:#2ECC71;
+
+}
+
+.confetti:nth-child(5n+4){
+
+background:#FF9800;
+
+}
+
+@keyframes confettiFall{
+
+0%{
+
+transform:translateY(-100vh) rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(120vh) rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+/*================ RESULT GLOW =================*/
+
+.result-glow{
+
+animation:glow 2s infinite alternate;
+
+}
+
+@keyframes glow{
+
+0%{
+
+box-shadow:0 0 20px rgba(255,255,255,.2);
+
+}
+
+100%{
+
+box-shadow:0 0 40px rgba(255,255,255,.5);
+
+}
+
+}
+
+/*================ CELEBRATION CIRCLE =================*/
+
+.celebration-circle{
+
+width:180px;
+
+height:180px;
+
+margin:30px auto;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(135deg,#00C6FF,#6C63FF);
+
+box-shadow:0 15px 40px rgba(0,0,0,.3);
+
+animation:celebrate 2s infinite alternate;
+
+}
+
+@keyframes celebrate{
+
+0%{
+
+transform:scale(1);
+
+}
+
+100%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+/*================ STAR EFFECT =================*/
+
+.star{
+
+position:absolute;
+
+font-size:20px;
+
+color:#FFD700;
+
+animation:twinkle 1.5s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%{
+
+opacity:.3;
+
+transform:scale(.5);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(1.2);
+
+}
+
+100%{
+
+opacity:.3;
+
+transform:scale(.5);
+
+}
+
+}
+
+/*================ MOBILE =================*/
+
+@media(max-width:768px){
+
+.performance-badge{
+
+font-size:18px;
+
+padding:12px 22px;
+
+}
+
+.trophy{
+
+font-size:70px;
+
+}
+
+.ribbon{
+
+font-size:16px;
+
+padding:10px 20px;
+
+}
+
+.celebration-circle{
+
+width:140px;
+
+height:140px;
+
+}
+
+}
+/* ===========================
+   DARK/LIGHT MODE
+=========================== */
+
+:root{
+    --bg:#f5f7fb;
+    --card:#ffffff;
+    --text:#222;
+    --primary:#4f46e5;
+    --secondary:#6b7280;
+    --shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    transition:.4s;
+}
+
+/* Dark Theme */
+
+body.dark{
+    --bg:#121212;
+    --card:#1e1e1e;
+    --text:#ffffff;
+    --primary:#8b5cf6;
+    --secondary:#d1d5db;
+    --shadow:0 10px 25px rgba(0,0,0,.5);
+}
+
+/* Cards */
+
+.container,
+.quiz-container,
+.result-container,
+.question-card,
+.stat-card{
+    background:var(--card);
+    color:var(--text);
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+/* Buttons */
+
+button{
+    background:var(--primary);
+    color:white;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+}
+
+/* Inputs */
+
+input,
+select{
+    background:var(--card);
+    color:var(--text);
+    border:1px solid #ccc;
+}
+
+/* Theme Switch */
+
+.theme-switch{
+    position:fixed;
+    top:20px;
+    right:20px;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    z-index:9999;
+}
+
+.switch{
+    position:relative;
+    display:inline-block;
+
+    width:60px;
+    height:34px;
+}
+
+.switch input{
+    display:none;
+}
+
+.slider{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    background:#ccc;
+
+    border-radius:40px;
+
+    transition:.4s;
+
+    cursor:pointer;
+}
+
+.slider::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:26px;
+    height:26px;
+
+    left:4px;
+    bottom:4px;
+
+    background:white;
+
+    border-radius:50%;
+
+    transition:.4s;
+}
+
+input:checked + .slider{
+
+    background:#6366f1;
+}
+
+input:checked + .slider::before{
+
+    transform:translateX(26px);
+}
+/* ================= FOOTER ================= */
+
+.footer{
+    width:100%;
+    background:#111827;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.social-icons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    margin:25px 0;
+}
+
+.social-icons a{
+    text-decoration:none;
+    color:white;
+    font-size:32px;
+    transition:.3s ease;
+}
+
+.social-icons a:hover{
+    transform:translateY(-6px) scale(1.2);
+}
+
+/* Individual icon colors */
+
+.social-icons .fa-github{
+    color:#ffffff;
+}
+
+.social-icons .fa-linkedin{
+    color:#0A66C2;
+}
+
+.social-icons .fa-telegram{
+    color:#229ED9;
+}
+
+.social-icons .fa-envelope{
+    color:#EA4335;
+}
