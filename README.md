@@ -70,17 +70,6 @@ Quiz-API-HACSTACK-PROJECT/
 ├── style.css
 ├── script.js
 ├── README.md
-│
-├── assets/
-│   ├── images/
-│   ├── icons/
-│   └── sounds/
-│
-└── screenshots/
-    ├── home.png
-    ├── quiz.png
-    ├── result.png
-    └── leaderboard.png
 ```
 
 ---
@@ -208,5 +197,5 @@ Your support encourages future improvements and more open-source projects.
 ---
 
 <p align="center">
-  <b>Made with ❤️ using HTML5 • CSS3 • JavaScript</b>
+  <b>Made with using HTML5 • CSS3 • JavaScript</b>
 </p>
